@@ -57,3 +57,8 @@ my_vector[10]
 # Slicing in vector
 my_vector_temp = my_vector[c(2,3)]
 my_vector_temp
+
+# Recycle Rule in a vector
+vector_1 = c(10, 20, 30) 
+vector_2 = c(1, 2, 3, 4, 5, 6, 7, 8, 9)
+vector_1 + vector_2
