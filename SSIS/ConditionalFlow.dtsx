@@ -1,0 +1,1638 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="7/31/2019 8:47:14 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="LAPTOP-JUBRA4DS"
+  DTS:CreatorName="LAPTOP-JUBRA4DS\Abhishek"
+  DTS:DTSID="{5EDD1D46-B46B-4209-81DD-3608C422E220}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.1300.375"
+  DTS:LocaleID="4105"
+  DTS:ObjectName="Package1"
+  DTS:PackageType="5"
+  DTS:VersionBuild="8"
+  DTS:VersionGUID="{587327A3-0C25-4501-9DFF-B86E98B6AD89}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LAPTOP-JUBRA4DS\MSSQLSERVER2017.SSISPractice]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{12FB7EEF-19C6-4144-9ECE-0DDF1C1F04FF}"
+      DTS:ObjectName="LAPTOP-JUBRA4DS\MSSQLSERVER2017.SSISPractice">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=LAPTOP-JUBRA4DS\MSSQLSERVER2017;Initial Catalog=SSISPractice;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LAPTOP-JUBRA4DS\MSSQLSERVER2017.World]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{5923E0C1-FADC-40B5-8B74-C54DD01B35B0}"
+      DTS:ObjectName="LAPTOP-JUBRA4DS\MSSQLSERVER2017.World">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=LAPTOP-JUBRA4DS\MSSQLSERVER2017;Initial Catalog=World;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Truncate Africa"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Truncate Africa Table"
+      DTS:DTSID="{F0AC0F38-2B4E-407A-BC9F-4B51F6EEFB0B}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Truncate Africa"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{12FB7EEF-19C6-4144-9ECE-0DDF1C1F04FF}"
+          SQLTask:SqlStatementSource="Truncate Table Africa" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Truncate Asia"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Truncate Asia Table"
+      DTS:DTSID="{D603E630-4ED7-4718-B278-25906C910BC1}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Truncate Asia"
+      DTS:ThreadHint="1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{12FB7EEF-19C6-4144-9ECE-0DDF1C1F04FF}"
+          SQLTask:SqlStatementSource="Truncate Table Asia" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Truncate Europe"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Truncate Europe Table"
+      DTS:DTSID="{4BCA097C-66B8-47BB-AA4C-40D9F43CEFFA}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Truncate Europe"
+      DTS:ThreadHint="2">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{12FB7EEF-19C6-4144-9ECE-0DDF1C1F04FF}"
+          SQLTask:SqlStatementSource="Truncate Table Europe" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Truncate Other"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Truncate Other Table"
+      DTS:DTSID="{57A1A526-1465-4783-BD34-B78EE847C797}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Truncate Other"
+      DTS:ThreadHint="3">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{12FB7EEF-19C6-4144-9ECE-0DDF1C1F04FF}"
+          SQLTask:SqlStatementSource="Truncate Table Other" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Using Conditional Flow Split the data"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{666CCC02-7642-4A9A-AFA1-22A79C99D23A}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Using Conditional Flow Split the data"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Using Conditional Flow Split the data\Africa"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Africa"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[Africa]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Using Conditional Flow Split the data\Africa.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LAPTOP-JUBRA4DS\MSSQLSERVER2017.SSISPractice]"
+                  connectionManagerRefId="Package.ConnectionManagers[LAPTOP-JUBRA4DS\MSSQLSERVER2017.SSISPractice]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Using Conditional Flow Split the data\Africa.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Using Conditional Flow Split the data\Africa.Inputs[OLE DB Destination Input].Columns[Country]"
+                      cachedDataType="nText"
+                      cachedName="Country"
+                      externalMetadataColumnId="Package\Using Conditional Flow Split the data\Africa.Inputs[OLE DB Destination Input].ExternalColumns[Country]"
+                      lineageId="Package\Using Conditional Flow Split the data\World Database.Outputs[OLE DB Source Output].Columns[Country]" />
+                    <inputColumn
+                      refId="Package\Using Conditional Flow Split the data\Africa.Inputs[OLE DB Destination Input].Columns[Capital]"
+                      cachedDataType="nText"
+                      cachedName="Capital"
+                      externalMetadataColumnId="Package\Using Conditional Flow Split the data\Africa.Inputs[OLE DB Destination Input].ExternalColumns[Capital]"
+                      lineageId="Package\Using Conditional Flow Split the data\World Database.Outputs[OLE DB Source Output].Columns[Capital]" />
+                    <inputColumn
+                      refId="Package\Using Conditional Flow Split the data\Africa.Inputs[OLE DB Destination Input].Columns[Population]"
+                      cachedDataType="r8"
+                      cachedName="Population"
+                      externalMetadataColumnId="Package\Using Conditional Flow Split the data\Africa.Inputs[OLE DB Destination Input].ExternalColumns[Population]"
+                      lineageId="Package\Using Conditional Flow Split the data\World Database.Outputs[OLE DB Source Output].Columns[Population]" />
+                    <inputColumn
+                      refId="Package\Using Conditional Flow Split the data\Africa.Inputs[OLE DB Destination Input].Columns[Total area]"
+                      cachedDataType="nText"
+                      cachedName="Total area"
+                      externalMetadataColumnId="Package\Using Conditional Flow Split the data\Africa.Inputs[OLE DB Destination Input].ExternalColumns[Total area]"
+                      lineageId="Package\Using Conditional Flow Split the data\World Database.Outputs[OLE DB Source Output].Columns[Total area]" />
+                    <inputColumn
+                      refId="Package\Using Conditional Flow Split the data\Africa.Inputs[OLE DB Destination Input].Columns[Continentid]"
+                      cachedDataType="r8"
+                      cachedName="Continentid"
+                      externalMetadataColumnId="Package\Using Conditional Flow Split the data\Africa.Inputs[OLE DB Destination Input].ExternalColumns[Continentid]"
+                      lineageId="Package\Using Conditional Flow Split the data\World Database.Outputs[OLE DB Source Output].Columns[Continentid]" />
+                    <inputColumn
+                      refId="Package\Using Conditional Flow Split the data\Africa.Inputs[OLE DB Destination Input].Columns[Continent]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="Continent"
+                      externalMetadataColumnId="Package\Using Conditional Flow Split the data\Africa.Inputs[OLE DB Destination Input].ExternalColumns[Continent]"
+                      lineageId="Package\Using Conditional Flow Split the data\World Database.Outputs[OLE DB Source Output].Columns[Continent]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Using Conditional Flow Split the data\Africa.Inputs[OLE DB Destination Input].ExternalColumns[Country]"
+                      dataType="nText"
+                      name="Country" />
+                    <externalMetadataColumn
+                      refId="Package\Using Conditional Flow Split the data\Africa.Inputs[OLE DB Destination Input].ExternalColumns[Capital]"
+                      dataType="nText"
+                      name="Capital" />
+                    <externalMetadataColumn
+                      refId="Package\Using Conditional Flow Split the data\Africa.Inputs[OLE DB Destination Input].ExternalColumns[Population]"
+                      dataType="r8"
+                      name="Population" />
+                    <externalMetadataColumn
+                      refId="Package\Using Conditional Flow Split the data\Africa.Inputs[OLE DB Destination Input].ExternalColumns[Total area]"
+                      dataType="nText"
+                      name="Total area" />
+                    <externalMetadataColumn
+                      refId="Package\Using Conditional Flow Split the data\Africa.Inputs[OLE DB Destination Input].ExternalColumns[Continentid]"
+                      dataType="r8"
+                      name="Continentid" />
+                    <externalMetadataColumn
+                      refId="Package\Using Conditional Flow Split the data\Africa.Inputs[OLE DB Destination Input].ExternalColumns[Continent]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="Continent" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Using Conditional Flow Split the data\Africa.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Using Conditional Flow Split the data\Africa.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Using Conditional Flow Split the data\Africa.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Using Conditional Flow Split the data\Africa.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Using Conditional Flow Split the data\Africa.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Using Conditional Flow Split the data\Africa.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Using Conditional Flow Split the data\Asia"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Asia"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[Asia]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Using Conditional Flow Split the data\Asia.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LAPTOP-JUBRA4DS\MSSQLSERVER2017.SSISPractice]"
+                  connectionManagerRefId="Package.ConnectionManagers[LAPTOP-JUBRA4DS\MSSQLSERVER2017.SSISPractice]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Using Conditional Flow Split the data\Asia.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Using Conditional Flow Split the data\Asia.Inputs[OLE DB Destination Input].Columns[Country]"
+                      cachedDataType="nText"
+                      cachedName="Country"
+                      externalMetadataColumnId="Package\Using Conditional Flow Split the data\Asia.Inputs[OLE DB Destination Input].ExternalColumns[Country]"
+                      lineageId="Package\Using Conditional Flow Split the data\World Database.Outputs[OLE DB Source Output].Columns[Country]" />
+                    <inputColumn
+                      refId="Package\Using Conditional Flow Split the data\Asia.Inputs[OLE DB Destination Input].Columns[Capital]"
+                      cachedDataType="nText"
+                      cachedName="Capital"
+                      externalMetadataColumnId="Package\Using Conditional Flow Split the data\Asia.Inputs[OLE DB Destination Input].ExternalColumns[Capital]"
+                      lineageId="Package\Using Conditional Flow Split the data\World Database.Outputs[OLE DB Source Output].Columns[Capital]" />
+                    <inputColumn
+                      refId="Package\Using Conditional Flow Split the data\Asia.Inputs[OLE DB Destination Input].Columns[Population]"
+                      cachedDataType="r8"
+                      cachedName="Population"
+                      externalMetadataColumnId="Package\Using Conditional Flow Split the data\Asia.Inputs[OLE DB Destination Input].ExternalColumns[Population]"
+                      lineageId="Package\Using Conditional Flow Split the data\World Database.Outputs[OLE DB Source Output].Columns[Population]" />
+                    <inputColumn
+                      refId="Package\Using Conditional Flow Split the data\Asia.Inputs[OLE DB Destination Input].Columns[Total area]"
+                      cachedDataType="nText"
+                      cachedName="Total area"
+                      externalMetadataColumnId="Package\Using Conditional Flow Split the data\Asia.Inputs[OLE DB Destination Input].ExternalColumns[Total area]"
+                      lineageId="Package\Using Conditional Flow Split the data\World Database.Outputs[OLE DB Source Output].Columns[Total area]" />
+                    <inputColumn
+                      refId="Package\Using Conditional Flow Split the data\Asia.Inputs[OLE DB Destination Input].Columns[Continentid]"
+                      cachedDataType="r8"
+                      cachedName="Continentid"
+                      externalMetadataColumnId="Package\Using Conditional Flow Split the data\Asia.Inputs[OLE DB Destination Input].ExternalColumns[Continentid]"
+                      lineageId="Package\Using Conditional Flow Split the data\World Database.Outputs[OLE DB Source Output].Columns[Continentid]" />
+                    <inputColumn
+                      refId="Package\Using Conditional Flow Split the data\Asia.Inputs[OLE DB Destination Input].Columns[Continent]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="Continent"
+                      externalMetadataColumnId="Package\Using Conditional Flow Split the data\Asia.Inputs[OLE DB Destination Input].ExternalColumns[Continent]"
+                      lineageId="Package\Using Conditional Flow Split the data\World Database.Outputs[OLE DB Source Output].Columns[Continent]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Using Conditional Flow Split the data\Asia.Inputs[OLE DB Destination Input].ExternalColumns[Country]"
+                      dataType="nText"
+                      name="Country" />
+                    <externalMetadataColumn
+                      refId="Package\Using Conditional Flow Split the data\Asia.Inputs[OLE DB Destination Input].ExternalColumns[Capital]"
+                      dataType="nText"
+                      name="Capital" />
+                    <externalMetadataColumn
+                      refId="Package\Using Conditional Flow Split the data\Asia.Inputs[OLE DB Destination Input].ExternalColumns[Population]"
+                      dataType="r8"
+                      name="Population" />
+                    <externalMetadataColumn
+                      refId="Package\Using Conditional Flow Split the data\Asia.Inputs[OLE DB Destination Input].ExternalColumns[Total area]"
+                      dataType="nText"
+                      name="Total area" />
+                    <externalMetadataColumn
+                      refId="Package\Using Conditional Flow Split the data\Asia.Inputs[OLE DB Destination Input].ExternalColumns[Continentid]"
+                      dataType="r8"
+                      name="Continentid" />
+                    <externalMetadataColumn
+                      refId="Package\Using Conditional Flow Split the data\Asia.Inputs[OLE DB Destination Input].ExternalColumns[Continent]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="Continent" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Using Conditional Flow Split the data\Asia.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Using Conditional Flow Split the data\Asia.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Using Conditional Flow Split the data\Asia.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Using Conditional Flow Split the data\Asia.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Using Conditional Flow Split the data\Asia.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Using Conditional Flow Split the data\Asia.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Using Conditional Flow Split the data\Conditional Split"
+              componentClassID="Microsoft.ConditionalSplit"
+              contactInfo="Conditional Split;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Routes data rows to different outputs depending on the content of the data. Use conditions (SSIS expressions) to specify which rows are routed. For example, separate records that need to be cleaned from those that are ready to be loaded or route only a subset of records."
+              name="Conditional Split"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Using Conditional Flow Split the data\Conditional Split.Inputs[Conditional Split Input]"
+                  description="Input to the Conditional Split Transformation"
+                  name="Conditional Split Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Using Conditional Flow Split the data\Conditional Split.Inputs[Conditional Split Input].Columns[Continent]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="Continent"
+                      lineageId="Package\Using Conditional Flow Split the data\World Database.Outputs[OLE DB Source Output].Columns[Continent]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Using Conditional Flow Split the data\Conditional Split.Outputs[Africa]"
+                  description="Output 1 of the Conditional Split Transformation"
+                  errorOrTruncationOperation="Computation"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Africa"
+                  synchronousInputId="Package\Using Conditional Flow Split the data\Conditional Split.Inputs[Conditional Split Input]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
+                      name="Expression">#{Package\Using Conditional Flow Split the data\World Database.Outputs[OLE DB Source Output].Columns[Continent]} == "Africa"</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the friendly version of the expression. This expression version uses column names."
+                      expressionType="Notify"
+                      name="FriendlyExpression">Continent == "Africa"</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
+                      name="EvaluationOrder">0</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Using Conditional Flow Split the data\Conditional Split.Outputs[Asia]"
+                  description="Output 2 of the Conditional Split Transformation"
+                  errorOrTruncationOperation="Computation"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Asia"
+                  synchronousInputId="Package\Using Conditional Flow Split the data\Conditional Split.Inputs[Conditional Split Input]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
+                      name="Expression">#{Package\Using Conditional Flow Split the data\World Database.Outputs[OLE DB Source Output].Columns[Continent]} == "Asia"</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the friendly version of the expression. This expression version uses column names."
+                      expressionType="Notify"
+                      name="FriendlyExpression">Continent == "Asia"</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
+                      name="EvaluationOrder">1</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Using Conditional Flow Split the data\Conditional Split.Outputs[Europe]"
+                  description="Output 3 of the Conditional Split Transformation"
+                  errorOrTruncationOperation="Computation"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Europe"
+                  synchronousInputId="Package\Using Conditional Flow Split the data\Conditional Split.Inputs[Conditional Split Input]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
+                      name="Expression">#{Package\Using Conditional Flow Split the data\World Database.Outputs[OLE DB Source Output].Columns[Continent]} == "Europe"</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the friendly version of the expression. This expression version uses column names."
+                      expressionType="Notify"
+                      name="FriendlyExpression">Continent == "Europe"</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
+                      name="EvaluationOrder">2</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Using Conditional Flow Split the data\Conditional Split.Outputs[Other]"
+                  description="Default Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  name="Other"
+                  synchronousInputId="Package\Using Conditional Flow Split the data\Conditional Split.Inputs[Conditional Split Input]">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      name="IsDefaultOut">true</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Using Conditional Flow Split the data\Conditional Split.Outputs[Conditional Split Error Output]"
+                  description="Error Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Conditional Split Error Output"
+                  synchronousInputId="Package\Using Conditional Flow Split the data\Conditional Split.Inputs[Conditional Split Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Using Conditional Flow Split the data\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Using Conditional Flow Split the data\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Using Conditional Flow Split the data\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Using Conditional Flow Split the data\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Using Conditional Flow Split the data\Europe"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Europe"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[Europe]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Using Conditional Flow Split the data\Europe.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LAPTOP-JUBRA4DS\MSSQLSERVER2017.SSISPractice]"
+                  connectionManagerRefId="Package.ConnectionManagers[LAPTOP-JUBRA4DS\MSSQLSERVER2017.SSISPractice]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Using Conditional Flow Split the data\Europe.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Using Conditional Flow Split the data\Europe.Inputs[OLE DB Destination Input].Columns[Country]"
+                      cachedDataType="nText"
+                      cachedName="Country"
+                      externalMetadataColumnId="Package\Using Conditional Flow Split the data\Europe.Inputs[OLE DB Destination Input].ExternalColumns[Country]"
+                      lineageId="Package\Using Conditional Flow Split the data\World Database.Outputs[OLE DB Source Output].Columns[Country]" />
+                    <inputColumn
+                      refId="Package\Using Conditional Flow Split the data\Europe.Inputs[OLE DB Destination Input].Columns[Capital]"
+                      cachedDataType="nText"
+                      cachedName="Capital"
+                      externalMetadataColumnId="Package\Using Conditional Flow Split the data\Europe.Inputs[OLE DB Destination Input].ExternalColumns[Capital]"
+                      lineageId="Package\Using Conditional Flow Split the data\World Database.Outputs[OLE DB Source Output].Columns[Capital]" />
+                    <inputColumn
+                      refId="Package\Using Conditional Flow Split the data\Europe.Inputs[OLE DB Destination Input].Columns[Population]"
+                      cachedDataType="r8"
+                      cachedName="Population"
+                      externalMetadataColumnId="Package\Using Conditional Flow Split the data\Europe.Inputs[OLE DB Destination Input].ExternalColumns[Population]"
+                      lineageId="Package\Using Conditional Flow Split the data\World Database.Outputs[OLE DB Source Output].Columns[Population]" />
+                    <inputColumn
+                      refId="Package\Using Conditional Flow Split the data\Europe.Inputs[OLE DB Destination Input].Columns[Total area]"
+                      cachedDataType="nText"
+                      cachedName="Total area"
+                      externalMetadataColumnId="Package\Using Conditional Flow Split the data\Europe.Inputs[OLE DB Destination Input].ExternalColumns[Total area]"
+                      lineageId="Package\Using Conditional Flow Split the data\World Database.Outputs[OLE DB Source Output].Columns[Total area]" />
+                    <inputColumn
+                      refId="Package\Using Conditional Flow Split the data\Europe.Inputs[OLE DB Destination Input].Columns[Continentid]"
+                      cachedDataType="r8"
+                      cachedName="Continentid"
+                      externalMetadataColumnId="Package\Using Conditional Flow Split the data\Europe.Inputs[OLE DB Destination Input].ExternalColumns[Continentid]"
+                      lineageId="Package\Using Conditional Flow Split the data\World Database.Outputs[OLE DB Source Output].Columns[Continentid]" />
+                    <inputColumn
+                      refId="Package\Using Conditional Flow Split the data\Europe.Inputs[OLE DB Destination Input].Columns[Continent]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="Continent"
+                      externalMetadataColumnId="Package\Using Conditional Flow Split the data\Europe.Inputs[OLE DB Destination Input].ExternalColumns[Continent]"
+                      lineageId="Package\Using Conditional Flow Split the data\World Database.Outputs[OLE DB Source Output].Columns[Continent]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Using Conditional Flow Split the data\Europe.Inputs[OLE DB Destination Input].ExternalColumns[Country]"
+                      dataType="nText"
+                      name="Country" />
+                    <externalMetadataColumn
+                      refId="Package\Using Conditional Flow Split the data\Europe.Inputs[OLE DB Destination Input].ExternalColumns[Capital]"
+                      dataType="nText"
+                      name="Capital" />
+                    <externalMetadataColumn
+                      refId="Package\Using Conditional Flow Split the data\Europe.Inputs[OLE DB Destination Input].ExternalColumns[Population]"
+                      dataType="r8"
+                      name="Population" />
+                    <externalMetadataColumn
+                      refId="Package\Using Conditional Flow Split the data\Europe.Inputs[OLE DB Destination Input].ExternalColumns[Total area]"
+                      dataType="nText"
+                      name="Total area" />
+                    <externalMetadataColumn
+                      refId="Package\Using Conditional Flow Split the data\Europe.Inputs[OLE DB Destination Input].ExternalColumns[Continentid]"
+                      dataType="r8"
+                      name="Continentid" />
+                    <externalMetadataColumn
+                      refId="Package\Using Conditional Flow Split the data\Europe.Inputs[OLE DB Destination Input].ExternalColumns[Continent]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="Continent" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Using Conditional Flow Split the data\Europe.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Using Conditional Flow Split the data\Europe.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Using Conditional Flow Split the data\Europe.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Using Conditional Flow Split the data\Europe.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Using Conditional Flow Split the data\Europe.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Using Conditional Flow Split the data\Europe.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Using Conditional Flow Split the data\Other"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Other"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[Other]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Using Conditional Flow Split the data\Other.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LAPTOP-JUBRA4DS\MSSQLSERVER2017.SSISPractice]"
+                  connectionManagerRefId="Package.ConnectionManagers[LAPTOP-JUBRA4DS\MSSQLSERVER2017.SSISPractice]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Using Conditional Flow Split the data\Other.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Using Conditional Flow Split the data\Other.Inputs[OLE DB Destination Input].Columns[Country]"
+                      cachedDataType="nText"
+                      cachedName="Country"
+                      externalMetadataColumnId="Package\Using Conditional Flow Split the data\Other.Inputs[OLE DB Destination Input].ExternalColumns[Country]"
+                      lineageId="Package\Using Conditional Flow Split the data\World Database.Outputs[OLE DB Source Output].Columns[Country]" />
+                    <inputColumn
+                      refId="Package\Using Conditional Flow Split the data\Other.Inputs[OLE DB Destination Input].Columns[Capital]"
+                      cachedDataType="nText"
+                      cachedName="Capital"
+                      externalMetadataColumnId="Package\Using Conditional Flow Split the data\Other.Inputs[OLE DB Destination Input].ExternalColumns[Capital]"
+                      lineageId="Package\Using Conditional Flow Split the data\World Database.Outputs[OLE DB Source Output].Columns[Capital]" />
+                    <inputColumn
+                      refId="Package\Using Conditional Flow Split the data\Other.Inputs[OLE DB Destination Input].Columns[Population]"
+                      cachedDataType="r8"
+                      cachedName="Population"
+                      externalMetadataColumnId="Package\Using Conditional Flow Split the data\Other.Inputs[OLE DB Destination Input].ExternalColumns[Population]"
+                      lineageId="Package\Using Conditional Flow Split the data\World Database.Outputs[OLE DB Source Output].Columns[Population]" />
+                    <inputColumn
+                      refId="Package\Using Conditional Flow Split the data\Other.Inputs[OLE DB Destination Input].Columns[Total area]"
+                      cachedDataType="nText"
+                      cachedName="Total area"
+                      externalMetadataColumnId="Package\Using Conditional Flow Split the data\Other.Inputs[OLE DB Destination Input].ExternalColumns[Total area]"
+                      lineageId="Package\Using Conditional Flow Split the data\World Database.Outputs[OLE DB Source Output].Columns[Total area]" />
+                    <inputColumn
+                      refId="Package\Using Conditional Flow Split the data\Other.Inputs[OLE DB Destination Input].Columns[Continentid]"
+                      cachedDataType="r8"
+                      cachedName="Continentid"
+                      externalMetadataColumnId="Package\Using Conditional Flow Split the data\Other.Inputs[OLE DB Destination Input].ExternalColumns[Continentid]"
+                      lineageId="Package\Using Conditional Flow Split the data\World Database.Outputs[OLE DB Source Output].Columns[Continentid]" />
+                    <inputColumn
+                      refId="Package\Using Conditional Flow Split the data\Other.Inputs[OLE DB Destination Input].Columns[Continent]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="Continent"
+                      externalMetadataColumnId="Package\Using Conditional Flow Split the data\Other.Inputs[OLE DB Destination Input].ExternalColumns[Continent]"
+                      lineageId="Package\Using Conditional Flow Split the data\World Database.Outputs[OLE DB Source Output].Columns[Continent]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Using Conditional Flow Split the data\Other.Inputs[OLE DB Destination Input].ExternalColumns[Country]"
+                      dataType="nText"
+                      name="Country" />
+                    <externalMetadataColumn
+                      refId="Package\Using Conditional Flow Split the data\Other.Inputs[OLE DB Destination Input].ExternalColumns[Capital]"
+                      dataType="nText"
+                      name="Capital" />
+                    <externalMetadataColumn
+                      refId="Package\Using Conditional Flow Split the data\Other.Inputs[OLE DB Destination Input].ExternalColumns[Population]"
+                      dataType="r8"
+                      name="Population" />
+                    <externalMetadataColumn
+                      refId="Package\Using Conditional Flow Split the data\Other.Inputs[OLE DB Destination Input].ExternalColumns[Total area]"
+                      dataType="nText"
+                      name="Total area" />
+                    <externalMetadataColumn
+                      refId="Package\Using Conditional Flow Split the data\Other.Inputs[OLE DB Destination Input].ExternalColumns[Continentid]"
+                      dataType="r8"
+                      name="Continentid" />
+                    <externalMetadataColumn
+                      refId="Package\Using Conditional Flow Split the data\Other.Inputs[OLE DB Destination Input].ExternalColumns[Continent]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="Continent" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Using Conditional Flow Split the data\Other.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Using Conditional Flow Split the data\Other.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Using Conditional Flow Split the data\Other.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Using Conditional Flow Split the data\Other.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Using Conditional Flow Split the data\Other.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Using Conditional Flow Split the data\Other.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Using Conditional Flow Split the data\World Database"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="World Database"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[Continents]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Using Conditional Flow Split the data\World Database.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LAPTOP-JUBRA4DS\MSSQLSERVER2017.World]"
+                  connectionManagerRefId="Package.ConnectionManagers[LAPTOP-JUBRA4DS\MSSQLSERVER2017.World]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Using Conditional Flow Split the data\World Database.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Using Conditional Flow Split the data\World Database.Outputs[OLE DB Source Output].Columns[Country]"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Using Conditional Flow Split the data\World Database.Outputs[OLE DB Source Output].ExternalColumns[Country]"
+                      lineageId="Package\Using Conditional Flow Split the data\World Database.Outputs[OLE DB Source Output].Columns[Country]"
+                      name="Country"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Using Conditional Flow Split the data\World Database.Outputs[OLE DB Source Output].Columns[Capital]"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Using Conditional Flow Split the data\World Database.Outputs[OLE DB Source Output].ExternalColumns[Capital]"
+                      lineageId="Package\Using Conditional Flow Split the data\World Database.Outputs[OLE DB Source Output].Columns[Capital]"
+                      name="Capital"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Using Conditional Flow Split the data\World Database.Outputs[OLE DB Source Output].Columns[Population]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Using Conditional Flow Split the data\World Database.Outputs[OLE DB Source Output].ExternalColumns[Population]"
+                      lineageId="Package\Using Conditional Flow Split the data\World Database.Outputs[OLE DB Source Output].Columns[Population]"
+                      name="Population"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Using Conditional Flow Split the data\World Database.Outputs[OLE DB Source Output].Columns[Total area]"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Using Conditional Flow Split the data\World Database.Outputs[OLE DB Source Output].ExternalColumns[Total area]"
+                      lineageId="Package\Using Conditional Flow Split the data\World Database.Outputs[OLE DB Source Output].Columns[Total area]"
+                      name="Total area"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Using Conditional Flow Split the data\World Database.Outputs[OLE DB Source Output].Columns[Continentid]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Using Conditional Flow Split the data\World Database.Outputs[OLE DB Source Output].ExternalColumns[Continentid]"
+                      lineageId="Package\Using Conditional Flow Split the data\World Database.Outputs[OLE DB Source Output].Columns[Continentid]"
+                      name="Continentid"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Using Conditional Flow Split the data\World Database.Outputs[OLE DB Source Output].Columns[Continent]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Using Conditional Flow Split the data\World Database.Outputs[OLE DB Source Output].ExternalColumns[Continent]"
+                      length="255"
+                      lineageId="Package\Using Conditional Flow Split the data\World Database.Outputs[OLE DB Source Output].Columns[Continent]"
+                      name="Continent"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Using Conditional Flow Split the data\World Database.Outputs[OLE DB Source Output].ExternalColumns[Continent]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="Continent" />
+                    <externalMetadataColumn
+                      refId="Package\Using Conditional Flow Split the data\World Database.Outputs[OLE DB Source Output].ExternalColumns[Country]"
+                      dataType="nText"
+                      name="Country" />
+                    <externalMetadataColumn
+                      refId="Package\Using Conditional Flow Split the data\World Database.Outputs[OLE DB Source Output].ExternalColumns[Capital]"
+                      dataType="nText"
+                      name="Capital" />
+                    <externalMetadataColumn
+                      refId="Package\Using Conditional Flow Split the data\World Database.Outputs[OLE DB Source Output].ExternalColumns[Population]"
+                      dataType="r8"
+                      name="Population" />
+                    <externalMetadataColumn
+                      refId="Package\Using Conditional Flow Split the data\World Database.Outputs[OLE DB Source Output].ExternalColumns[Total area]"
+                      dataType="nText"
+                      name="Total area" />
+                    <externalMetadataColumn
+                      refId="Package\Using Conditional Flow Split the data\World Database.Outputs[OLE DB Source Output].ExternalColumns[Continentid]"
+                      dataType="r8"
+                      name="Continentid" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Using Conditional Flow Split the data\World Database.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Using Conditional Flow Split the data\World Database.Outputs[OLE DB Source Error Output].Columns[Country]"
+                      dataType="nText"
+                      lineageId="Package\Using Conditional Flow Split the data\World Database.Outputs[OLE DB Source Error Output].Columns[Country]"
+                      name="Country" />
+                    <outputColumn
+                      refId="Package\Using Conditional Flow Split the data\World Database.Outputs[OLE DB Source Error Output].Columns[Capital]"
+                      dataType="nText"
+                      lineageId="Package\Using Conditional Flow Split the data\World Database.Outputs[OLE DB Source Error Output].Columns[Capital]"
+                      name="Capital" />
+                    <outputColumn
+                      refId="Package\Using Conditional Flow Split the data\World Database.Outputs[OLE DB Source Error Output].Columns[Population]"
+                      dataType="r8"
+                      lineageId="Package\Using Conditional Flow Split the data\World Database.Outputs[OLE DB Source Error Output].Columns[Population]"
+                      name="Population" />
+                    <outputColumn
+                      refId="Package\Using Conditional Flow Split the data\World Database.Outputs[OLE DB Source Error Output].Columns[Total area]"
+                      dataType="nText"
+                      lineageId="Package\Using Conditional Flow Split the data\World Database.Outputs[OLE DB Source Error Output].Columns[Total area]"
+                      name="Total area" />
+                    <outputColumn
+                      refId="Package\Using Conditional Flow Split the data\World Database.Outputs[OLE DB Source Error Output].Columns[Continentid]"
+                      dataType="r8"
+                      lineageId="Package\Using Conditional Flow Split the data\World Database.Outputs[OLE DB Source Error Output].Columns[Continentid]"
+                      name="Continentid" />
+                    <outputColumn
+                      refId="Package\Using Conditional Flow Split the data\World Database.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Using Conditional Flow Split the data\World Database.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Using Conditional Flow Split the data\World Database.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Using Conditional Flow Split the data\World Database.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                    <outputColumn
+                      refId="Package\Using Conditional Flow Split the data\World Database.Outputs[OLE DB Source Error Output].Columns[Continent]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      lineageId="Package\Using Conditional Flow Split the data\World Database.Outputs[OLE DB Source Error Output].Columns[Continent]"
+                      name="Continent" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Using Conditional Flow Split the data.Paths[Africa]"
+              endId="Package\Using Conditional Flow Split the data\Africa.Inputs[OLE DB Destination Input]"
+              name="Africa"
+              startId="Package\Using Conditional Flow Split the data\Conditional Split.Outputs[Africa]" />
+            <path
+              refId="Package\Using Conditional Flow Split the data.Paths[Asia]"
+              endId="Package\Using Conditional Flow Split the data\Asia.Inputs[OLE DB Destination Input]"
+              name="Asia"
+              startId="Package\Using Conditional Flow Split the data\Conditional Split.Outputs[Asia]" />
+            <path
+              refId="Package\Using Conditional Flow Split the data.Paths[Europe]"
+              endId="Package\Using Conditional Flow Split the data\Europe.Inputs[OLE DB Destination Input]"
+              name="Europe"
+              startId="Package\Using Conditional Flow Split the data\Conditional Split.Outputs[Europe]" />
+            <path
+              refId="Package\Using Conditional Flow Split the data.Paths[OLE DB Source Output]"
+              endId="Package\Using Conditional Flow Split the data\Conditional Split.Inputs[Conditional Split Input]"
+              name="OLE DB Source Output"
+              startId="Package\Using Conditional Flow Split the data\World Database.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\Using Conditional Flow Split the data.Paths[Other]"
+              endId="Package\Using Conditional Flow Split the data\Other.Inputs[OLE DB Destination Input]"
+              name="Other"
+              startId="Package\Using Conditional Flow Split the data\Conditional Split.Outputs[Other]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{58A492F2-7E65-4BC1-97EB-A9A9CED95579}"
+      DTS:From="Package\Truncate Asia"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Using Conditional Flow Split the data" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{774AABF8-5CFE-45BC-BB43-A1B416C99C70}"
+      DTS:From="Package\Truncate Africa"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1"
+      DTS:To="Package\Using Conditional Flow Split the data" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 2]"
+      DTS:CreationName=""
+      DTS:DTSID="{AE7BF9E6-CF3F-410F-871A-C807718585FC}"
+      DTS:From="Package\Truncate Europe"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 2"
+      DTS:To="Package\Using Conditional Flow Split the data" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 3]"
+      DTS:CreationName=""
+      DTS:DTSID="{8F899BEF-5E5B-49B2-9990-F692459FE803}"
+      DTS:From="Package\Truncate Other"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 3"
+      DTS:To="Package\Using Conditional Flow Split the data" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="248,41.6"
+          Id="Package\Using Conditional Flow Split the data"
+          TopLeft="250.833323584663,311.953335768806" />
+        <NodeLayout
+          Size="156.8,41.6"
+          Id="Package\Truncate Asia"
+          TopLeft="20.8333327240414,45.7133336529202" />
+        <NodeLayout
+          Size="152,41.6"
+          Id="Package\Truncate Africa"
+          TopLeft="202.833326684104,47.9800000991821" />
+        <NodeLayout
+          Size="156.8,41.6"
+          Id="Package\Truncate Europe"
+          TopLeft="380.166654162937,50.9399998842875" />
+        <NodeLayout
+          Size="104.8,41.6"
+          Id="Package\Truncate Other"
+          TopLeft="560.833314842649,49.7399996363322" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="99.2333327240414,87.3133336529202">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="203.599990860621,224.640002115885"
+              Start="0,0"
+              End="203.599990860621,217.140002115885">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,154.269092399828" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,154.269092399828"
+                    Point2="0,158.269092399828"
+                    Point3="4,158.269092399828" />
+                  <mssgle:LineSegment
+                    End="199.599990860621,158.269092399828" />
+                  <mssgle:CubicBezierSegment
+                    Point1="199.599990860621,158.269092399828"
+                    Point2="203.599990860621,158.269092399828"
+                    Point3="203.599990860621,162.269092399828" />
+                  <mssgle:LineSegment
+                    End="203.599990860621,217.140002115885" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="278.833326684104,89.5800000991821">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="71.9999969005586,222.373335669623"
+              Start="0,0"
+              End="71.9999969005586,214.873335669623">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,119.099525102827" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,119.099525102827"
+                    Point2="0,123.099525102827"
+                    Point3="4,123.099525102827" />
+                  <mssgle:LineSegment
+                    End="67.9999969005586,123.099525102827" />
+                  <mssgle:CubicBezierSegment
+                    Point1="67.9999969005586,123.099525102827"
+                    Point2="71.9999969005586,123.099525102827"
+                    Point3="71.9999969005586,127.099525102827" />
+                  <mssgle:LineSegment
+                    End="71.9999969005586,214.873335669623" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 2]"
+          TopLeft="458.566654162937,92.5399998842875">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-59.7333305782744,219.413335884518"
+              Start="0,0"
+              End="-59.7333305782744,211.913335884518">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,117.460953793215" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,117.460953793215"
+                    Point2="0,121.460953793215"
+                    Point3="-4,121.460953793215" />
+                  <mssgle:LineSegment
+                    End="-55.7333305782744,121.460953793215" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-55.7333305782744,121.460953793215"
+                    Point2="-59.7333305782744,121.460953793215"
+                    Point3="-59.7333305782744,125.460953793215" />
+                  <mssgle:LineSegment
+                    End="-59.7333305782744,211.913335884518" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 3]"
+          TopLeft="613.233314842649,91.3399996363322">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-166.399991257986,220.613336132473"
+              Start="0,0"
+              End="-166.399991257986,213.113336132473">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,151.432123184243" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,151.432123184243"
+                    Point2="0,155.432123184243"
+                    Point3="-4,155.432123184243" />
+                  <mssgle:LineSegment
+                    End="-162.399991257986,155.432123184243" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-162.399991257986,155.432123184243"
+                    Point2="-166.399991257986,155.432123184243"
+                    Point3="-166.399991257986,159.432123184243" />
+                  <mssgle:LineSegment
+                    End="-166.399991257986,213.113336132473" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Using Conditional Flow Split the data">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="152.8,41.6"
+          Id="Package\Using Conditional Flow Split the data\World Database"
+          TopLeft="256.166656706069,20.0600001157125" />
+        <NodeLayout
+          Size="153.6,41.6"
+          Id="Package\Using Conditional Flow Split the data\Conditional Split"
+          TopLeft="251.499996185303,99.3399995536804" />
+        <EdgeLayout
+          Id="Package\Using Conditional Flow Split the data.Paths[OLE DB Source Output]"
+          TopLeft="330.433326445686,61.6600001157125">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,37.679999437968"
+              Start="0,0"
+              End="0,30.179999437968">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,30.179999437968" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="98.4,41.6"
+          Id="Package\Using Conditional Flow Split the data\Asia"
+          TopLeft="14.8333448833884,220.913332661099" />
+        <NodeLayout
+          Size="104.8,41.6"
+          Id="Package\Using Conditional Flow Split the data\Africa"
+          TopLeft="164.166673474841,221.09999909083" />
+        <NodeLayout
+          Size="112,41.6"
+          Id="Package\Using Conditional Flow Split the data\Europe"
+          TopLeft="324.166668309106,221.286665520562" />
+        <NodeLayout
+          Size="104.8,41.6"
+          Id="Package\Using Conditional Flow Split the data\Other"
+          TopLeft="490.83331404792,223.206668396844" />
+        <EdgeLayout
+          Id="Package\Using Conditional Flow Split the data.Paths[Asia]"
+          TopLeft="284.619996185303,140.93999955368">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-220.586651301914,79.9733331074185"
+              Start="0,0"
+              End="-220.586651301914,72.4733331074185">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,20.0967684908815" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,20.0967684908815"
+                    Point2="0,24.0967684908815"
+                    Point3="-4,24.0967684908815" />
+                  <mssgle:LineSegment
+                    End="-216.586651301914,24.0967684908815" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-216.586651301914,24.0967684908815"
+                    Point2="-220.586651301914,24.0967684908815"
+                    Point3="-220.586651301914,28.0967684908815" />
+                  <mssgle:LineSegment
+                    End="-220.586651301914,72.4733331074185" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-120.004751432207,29.0967684908815,19.4228515625,9.470703125"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Using Conditional Flow Split the data.Paths[Africa]"
+          TopLeft="313.739996185303,140.93999955368">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-97.1733227104615,80.15999953715"
+              Start="0,0"
+              End="-97.1733227104615,72.65999953715">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,31.8828996777346" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,31.8828996777346"
+                    Point2="0,35.8828996777346"
+                    Point3="-4,35.8828996777346" />
+                  <mssgle:LineSegment
+                    End="-93.1733227104615,35.8828996777346" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-93.1733227104615,35.8828996777346"
+                    Point2="-97.1733227104615,35.8828996777346"
+                    Point3="-97.1733227104615,39.8828996777346" />
+                  <mssgle:LineSegment
+                    End="-97.1733227104615,72.65999953715" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-61.7630871364808,40.8828996777346,26.3528515625,9.7978515625"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Using Conditional Flow Split the data.Paths[Europe]"
+          TopLeft="342.859996185303,140.93999955368">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="37.3066721238029,80.3466659668816"
+              Start="0,0"
+              End="37.3066721238029,72.8466659668816">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,31.9664592187767" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,31.9664592187767"
+                    Point2="0,35.9664592187767"
+                    Point3="4,35.9664592187767" />
+                  <mssgle:LineSegment
+                    End="33.3066721238029,35.9664592187767" />
+                  <mssgle:CubicBezierSegment
+                    Point1="33.3066721238029,35.9664592187767"
+                    Point2="37.3066721238029,35.9664592187767"
+                    Point3="37.3066721238029,39.9664592187767" />
+                  <mssgle:LineSegment
+                    End="37.3066721238029,72.8466659668816" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="2.64698840565143,40.9664592187767,32.0126953125,11.2822265625"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Using Conditional Flow Split the data.Paths[Other]"
+          TopLeft="371.979996185303,140.93999955368">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="171.253317862617,82.2666688431634"
+              Start="0,0"
+              End="171.253317862617,74.7666688431634">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,20.7877735815645" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,20.7877735815645"
+                    Point2="0,24.7877735815645"
+                    Point3="4,24.7877735815645" />
+                  <mssgle:LineSegment
+                    End="167.253317862617,24.7877735815645" />
+                  <mssgle:CubicBezierSegment
+                    Point1="167.253317862617,24.7877735815645"
+                    Point2="171.253317862617,24.7877735815645"
+                    Point3="171.253317862617,28.7877735815645" />
+                  <mssgle:LineSegment
+                    End="171.253317862617,74.7666688431634" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="72.3804479938086,29.7877735815645,26.492421875,9.7490234375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Using Conditional Flow Split the data\World Database">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Using Conditional Flow Split the data\Asia">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Using Conditional Flow Split the data\Africa">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Using Conditional Flow Split the data\Europe">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Using Conditional Flow Split the data\Other">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
