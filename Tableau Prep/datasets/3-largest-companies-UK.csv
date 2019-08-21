@@ -1,0 +1,96 @@
+Global Rank	,Company	,Sales ($billion)	,Profits ($billion)	,Assets ($billion)	,Market Value ($billion)
+6,HSBC Holdings,104.9,14.3,2684.1,201.3
+18,BP,370.9,11.6,301,130.4
+33,Vodafone,74.4,11.1,219.9,135.7
+65,Prudential,90.2,3.6,489.4,44.7
+98,Standard Chartered,26.9,4.9,636.5,64.4
+105,Tesco,102.8,4.5,81.1,46.9
+112,GlaxoSmithKline,43,7.4,63.5,111.1
+149,AstraZeneca,28.6,6.4,52.5,58
+159,British American Tobacco,24.1,6.1,44.2,102
+163,BG Group,19.3,4.6,64.4,60.6
+179,National Grid,21.7,3.3,75.6,40.7
+188,SABMiller,16.7,4.3,55,84.1
+208,Legal & General Group,56.9,1.3,562.9,15.5
+221,BT Group,30.9,3.2,37.3,32.5
+224,Old Mutual,32.2,1.9,230.4,15.5
+242,Diageo,16.9,3,34.5,76.4
+245,Centrica,38.9,2.1,35.4,27.7
+287,Standard Life,31.2,1.1,283,13.5
+291,Rolls-Royce Holding,19.8,3.7,28.9,30.7
+296,Imperial Tobacco Group,23.7,1.1,44.4,35.2
+319,Reckitt Benckiser Group,15.6,3,24.4,51.2
+325,BAE Systems,26.3,1.7,36.2,18.8
+355,WPP,16.9,1.3,40.3,20.7
+390,Lloyds Banking Group,75.6,-2.3,1495.9,53.8
+400,Barclays,55.7,-1.7,2422.5,62.3
+420,Royal Bank of Scotland,42.1,-9.4,2133.1,52
+435,Rio Tinto,51,-3,117.6,98.5
+471,Compass Group,27.3,1,14.4,23.1
+473,Aon,11.5,1,30.5,18.7
+493,Associated British Foods,19.8,0.9,16.2,22.7
+502,Reed Elsevier,9.9,1.7,17.9,25.6
+520,J Sainsbury,35.7,1,19.7,10.4
+520,Aviva,69,-5.1,512.7,14.5
+522,Anglo American,29.4,-1.5,78.1,39.9
+539,SSE,50.8,0.3,31.1,21.2
+576,Wim Morrison Supermarkets,28.8,1,16.6,9.5
+642,Ensco,6.8,1.8,18.5,14.1
+643,Kingfisher,16.8,0.9,15.6,10.3
+679,Delphi Automotive,15.5,1.1,10.2,13.6
+700,British Sky Broadcasting,10.7,1.4,8.6,21.6
+731,RSA Insurance Group,14.4,0.6,33.4,6.3
+753,Pearson,8.2,0.5,18.1,14.9
+756,Antofagasta,6.7,1,12.9,16.1
+759,Marks & Spencer,15.9,0.8,11.6,9.1
+900,London Stock Exchange,1.1,0.8,163.6,5.7
+912,International Airlines,23.9,-1.2,25.6,7.6
+923,Evraz Group,16.4,0.5,17,5.4
+924,Investec,5.8,0.4,82.1,6.5
+979,GKN,10.6,0.8,9.7,6.8
+999,Land Securities Group,1.1,0.8,17.3,9.8
+1006,Johnson Matthey,19.3,0.5,5.2,7.5
+1013,Subsea 7,6.3,0.8,10.5,8.3
+1076,Vedanta Resources,14,0.1,45.4,4.7
+1098,Schroders,2.3,0.4,23.8,9.2
+1120,Next,5.6,0.8,3,10
+1133,Tullow Oil,2.4,0.6,9.4,17.2
+1202,Petrofac,6.5,0.6,5.3,8.1
+1206,British Land,0.6,0.8,13,7.5
+1277,United Utilities,2.5,0.5,16,7.1
+1283,Smith & Nephew,4.2,0.7,5.5,10.2
+1293,Polyus Gold International,2.8,0.9,5.6,9.8
+1318,Essar Energy,16.7,-0.6,17.4,2.9
+1350,Eurasian Natural Resources,6.3,-0.8,20.2,6.8
+1414,Rexam,7,0.3,9.9,6.3
+1451,Direct Line Insurance,6.1,0.3,18.8,4.7
+1464,Capita,5.4,0.4,6.3,8.7
+1487,Mondi,7.7,0.3,8.7,6.4
+1489,Bunzl,8.7,0.3,4.8,6.5
+1498,G4S,11.9,0.1,9.1,6.4
+1517,EasyJet,6.2,0.4,6.9,6.4
+1526,Travis Perkins,7.9,0.4,7.1,5
+1540,InterContinental Hotels,1.9,0.6,3.1,8.1
+1551,Weir Group,4.1,0.5,5.3,7.9
+1554,ICAP,2.7,0.2,129.9,3.2
+1571,Burberry Group,3,0.4,2.4,9.7
+1602,Smiths Group,4.7,0.4,5.3,7.8
+1636,ARM Holdings,0.9,0.3,2.3,19.6
+1647,Serco Group,7.8,0.4,5.3,4.7
+1654,Tate & Lyle,4.9,0.5,4.6,5.8
+1664,Aggreko,2.6,0.4,3.4,8
+1671,FirstGroup,10.7,0.3,8.4,1.5
+1680,Balfour Beauty,15.4,0.1,9.2,2.9
+1683,Thomas Cook Group,15.3,-0.9,9.2,1.6
+1704,ITV,3.6,0.4,4.4,7.8
+1726,Carphone Warehouse,0,1.2,1.2,1.4
+1778,Whitbread,2.8,0.4,4.7,7
+1779,AMEC,6.8,0.4,4,4.8
+1812,Vesuvius,2.5,0.9,3,1.7
+1813,Sage Group,2.2,0.5,4,6.1
+1843,Inchcape,9.6,0.3,5.5,3.6
+1854,Willis Group Holdings,3.5,-0.4,15.1,6.6
+1892,Dixons Retail,13.3,-0.3,4.7,1.9
+1941,Severn Trent,2.8,0.3,12.3,5.9
+1942,Aberdeen Asset Management,1.4,0.3,6.5,7.5
+1987,IMI,3.5,0.4,2.8,6.6
